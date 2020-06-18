@@ -642,6 +642,67 @@ button::-moz-focus-inner {
     font-size: 15px;
 }
 
+/* Reviews */
+
+.reviews {
+    background-color: #F8F7F1;
+}
+
+.reviews__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #5A3733;
+    border-radius: 20px;
+    padding: 10px;
+    margin-right: 20px;
+    min-height: 178px;
+}
+
+.reviews__photo {    
+    max-width: 150px;
+    border-radius: 50%;
+    border: 3px solid #F8F7F1;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.reviews__author {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.reviews__date {
+    margin-bottom: 10px;
+}
+
+.reviews__text {
+    font-style: italic;
+}
+
+.swiper-container {
+    height: 250px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    left: -1%;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 8px;
+}
+
+.swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #EB6D2F;
+}
+
+/* Contacts */
+
 
 
 

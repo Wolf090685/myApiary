@@ -68,3 +68,23 @@ cover.addEventListener('click', event => {
         count = img.length;
     }    
 });
+
+// Слайдер с отзывами 
+
+let mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    loop: true,
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+      540: {
+        slidesPerView: 2,      
+      }
+    }
+  });
