@@ -39,32 +39,32 @@
                 <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item">
-                            <a class="header__menu-link active" href="#">
+                            <a class="header__menu-link active" href="#products">
                                 Продукция
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#">
+                            <a class="header__menu-link" href="#features">
                                 Преимущества
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#">
+                            <a class="header__menu-link" href="#apiary">
                                 Пасека
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#">
+                            <a class="header__menu-link" href="#honey">
                                 Донниковый мёд
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#">
+                            <a class="header__menu-link" href="#reviews">
                                 Отзывы
                             </a>
                         </li>
                         <li class="header__menu-item">
-                            <a class="header__menu-link" href="#">
+                            <a class="header__menu-link" href="#contacts">
                                 Контакты
                             </a>
                         </li>
@@ -72,6 +72,11 @@
                     <!-- /.header__menu-list -->
                 </nav>
                 <!-- /.header__menu -->
+
+                <button class="nav-toggle" id="nav-toggle" type="button">
+                    <img src="images/features/honey.svg" alt="Мобильное меню">
+                </button>
+                <!-- /.nav--toggle -->
 
                 <div class="header__contacts">
                     <a class="header__contacts-phone" href="tel:89095136127">
@@ -423,8 +428,7 @@
                                     <div class="reviews__author">Кирилл, 35 лет, Чита</div>
                                     <div class="reviews__date">25 мая 2020 года</div>
                                     <p class="reviews__text">Был наслышан о пользе этого сорта меда, заказал доставку и
-                                        не пожалел. Желаю развития, хотелось бы попробовать другие продукты
-                                        пчеловодства. Например, маточное молочко.</p>
+                                        не пожалел. Желаю высоких медосборов!</p>
                                 </div>
                             </div>
                         </div>
@@ -460,21 +464,24 @@
     <footer class="footer" id=footer>
 
         <div class="footer__contacts">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.253043687303!2d87.13843951574641!3d53.74937718006555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42d0c108f35585e1%3A0x8b69f1f7b7400676!2z0YPQuy4g0KbQuNC-0LvQutC-0LLRgdC60L7Qs9C-LCA0Miwg0J3QvtCy0L7QutGD0LfQvdC10YbQuiwg0JrQtdC80LXRgNC-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDY1NDA0MQ!5e0!3m2!1sru!2sby!4v1592549086998!5m2!1sru!2sby" allowfullscreen></iframe>
-        <div class="footer__info">
-            <address class="footer__addr">г. Новокузнецк, ул. Циолковского, д.42</address>
-            <a class="footer__phone" href="tel:89095136127">8-909-513-6127</a>
-            <div class="footer__social">
-                <a href="https://vk.com/svojapaseka" target="_blank" class="footer__social-item">
-                    <img src="images/social_icons/vkontakte.svg" alt="ВКонтакте">
-                </a>
-                <a href="https://www.instagram.com/SvoyaPaseka" target="_blank" class="footer__social-item">
-                    <img src="images/social_icons/instagram.svg" alt="instagram">
-                </a>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.253043687303!2d87.13843951574641!3d53.74937718006555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42d0c108f35585e1%3A0x8b69f1f7b7400676!2z0YPQuy4g0KbQuNC-0LvQutC-0LLRgdC60L7Qs9C-LCA0Miwg0J3QvtCy0L7QutGD0LfQvdC10YbQuiwg0JrQtdC80LXRgNC-0LLRgdC60LDRjyDQvtCx0LsuLCDQoNC-0YHRgdC40Y8sIDY1NDA0MQ!5e0!3m2!1sru!2sby!4v1592549086998!5m2!1sru!2sby"
+                allowfullscreen></iframe>
+            <div class="footer__info">
+                <address class="footer__addr">г. Новокузнецк, ул. Циолковского, д.42</address>
+                <a class="footer__phone" href="tel:89095136127">8-909-513-6127</a>
+                <div class="footer__social">
+                    <a href="https://vk.com/svojapaseka" target="_blank" class="footer__social-item">
+                        <img src="images/social_icons/vkontakte.svg" alt="ВКонтакте">
+                    </a>
+                    <a href="https://www.instagram.com/SvoyaPaseka" target="_blank" class="footer__social-item">
+                        <img src="images/social_icons/instagram.svg" alt="instagram">
+                    </a>
+                </div>
+                <!-- footer__social -->
             </div>
-            <!-- footer__social -->
-        </div>
-        <!-- footer__info -->
+            <!-- footer__info -->
+
         </div>
         <!-- /.footer__contacts -->
 
@@ -487,15 +494,15 @@
             <div class="footer__copyright-text">
                 Copyright © "Своя пасека" 2010-2020 Все права защищены
             </div>
-            <div class="footer__copyright-author">Сайт разработан <a href="https://vk.com/id215660060" target="_blank"> Aliaksandr Dumaronak</a></div>
+            <div class="footer__copyright-author">Сайт разработан <a href="https://vk.com/id215660060" target="_blank">
+                    Aliaksandr Dumaronak</a></div>
         </div>
         <!-- /.footer__copyright -->
+
+        <button class="footer__to-top" id="to-top"><img src="images/bee_icons/bee1.svg" alt="Скролл наверх"></button> <!-- /to-top -->
+
     </footer>
     <!-- /.footer -->
-
-
-
-
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/swiper.min.js"></script>

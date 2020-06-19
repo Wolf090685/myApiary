@@ -190,7 +190,8 @@ button::-moz-focus-inner {
 
 .offer__descr {
     font-size: 18px;
-    line-height: 1.4em;   
+    line-height: 1.4em; 
+    font-weight: 700;  
     margin-bottom: 30px;
     text-shadow: 2px 1px 6px #5A3733;
 }
@@ -198,7 +199,7 @@ button::-moz-focus-inner {
 .offer__btn {
     display: inline-block;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -297,7 +298,7 @@ button::-moz-focus-inner {
 
 .products-item__descr {
 	margin-top: 16px;
-    max-width: 255px;
+    max-width: 249px;
 }
 
 .products-item__link {
@@ -409,7 +410,7 @@ button::-moz-focus-inner {
 
 .features {
     background-color: #FFD832;
-    position: relative;
+    position: relative;   
 }
 
 .features::before {
@@ -432,7 +433,7 @@ button::-moz-focus-inner {
 
 .features__item {
     width: 25%;
-    max-width: 200px;
+    min-width: 200px;
     text-align: center;
     padding: 10px;
 }
@@ -445,6 +446,8 @@ button::-moz-focus-inner {
 
 .features__img {
     position: relative;
+    width: 180px;
+    margin: 0 auto;
 }
 
 .features__img::after {
@@ -482,10 +485,10 @@ button::-moz-focus-inner {
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+    overflow: hidden;
 }
 
-.apiary__photo {
-    border-radius: 20px;
+.apiary__photo {    
     min-height: 400px;
     position: relative;
     max-width: 800px;
@@ -494,8 +497,8 @@ button::-moz-focus-inner {
 }
 
 .card {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     box-shadow: 3px 3px 5px #5A3733;
     position: absolute;
     transition: all 0.5s linear;
@@ -520,6 +523,7 @@ button::-moz-focus-inner {
     background-size: cover;
     position: relative;
     z-index: 5;
+    overflow: hidden;
 }
 
 .honey__bee-icon-right {
@@ -806,8 +810,151 @@ button::-moz-focus-inner {
     color: #EB6D2F;
 }
 
+/* To top */
 
+.footer__to-top {
+    display: none;
+    border: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;    
+    background-color: transparent;
+    transition: background-color 0.3s linear;
+    z-index: 20;
+}
 
+.footer__to-top:hover {
+    background-color: #EB6D2F;
+}
+
+.footer__to-top img {
+    display: block;
+    width: 100%;
+}
+
+/* Burger menu */
+
+.nav-toggle {
+    display: none;
+    width: 50px;
+    padding: 10px 0;
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    z-index: 30;   
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.nav-toggle:hover {
+    background-color: #EB6D2F;
+    transform: scale(1.05);
+    box-shadow: 12px 10px 16px #5A3733;
+}
+
+/* Media */
+
+@media (max-width: 1199px) {
+    .offer__title {
+        font-size: 65px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header__menu-list {
+        display: none;
+    }
+
+    .header__contacts {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .offer__title {
+        font-size: 55px;
+        line-height: 1.2em;
+    }
+
+    .offer__descr {
+        font-size: 16px;
+    }
+
+    .products__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-item {
+        width: 100%;
+    }
+
+    .features__item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
+    .offer__title {
+        font-size: 45px;
+        margin-bottom: 18px;
+    }
+
+    .section__title {
+        font-size: 36px;
+    }
+
+    .footer__to-top {
+        width: 60px;
+        height: 60px;
+        right: 20px;
+        bottom: 20px; 
+    }
+}
+
+@media (max-width: 575px) {
+    .offer__title {
+        font-size: 38px;
+    }
+
+    .section__title {
+        margin-bottom: 95px;
+    }
+
+    .features__item {
+        width: 100%;
+    }
+
+    .swiper-container {
+        height: 320px;
+    }
+
+    .reviews__photo {
+        width: 300px;
+    }
+
+    .reviews__author {
+        font-size: 16px;
+    }
+
+    .reviews__text {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+}
 
 
 

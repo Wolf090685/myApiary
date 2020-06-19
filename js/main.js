@@ -1,8 +1,8 @@
 // Переворот карточек 
 
 function toggleSlide(item) {
-    $(item).each(function(i) {
-        $(this).on('click', function(e) {
+    $(item).each(function (i) {
+        $(this).on('click', function (e) {
             e.preventDefault();
             $('.products-item__content').eq(i).toggleClass('products-item__content_active');
             $('.products-item__list').eq(i).toggleClass('products-item__list_active');
@@ -48,25 +48,26 @@ function createImages() {
         card.style.background = `url('images/slider-apiary/${img[i]}')`;
         card.style.backgroundSize = 'cover';
         card.style.backgroundPosition = 'center';
-        card.style.transform = `rotate(${randomInteger(-10, 25)}deg) translate(${randomInteger(-20, 35)}px, ${randomInteger(-5, 65)}px)`;
+        card.style.backgroundRepeat = 'no-repeat';
+        card.style.transform = `rotate(${randomInteger(-20, 25)}deg) translate(${randomInteger(-20, 35)}px, ${randomInteger(-5, 65)}px)`;
         cover.append(card);
-    }    
+    }
 }
 
 createImages();
 
 cover.addEventListener('click', event => {
-   
+
     if (event.target.classList.contains('card')) {
         event.target.classList.add('left');
-        count--; 
+        count--;
     }
 
     if (count == 0) {
         cover.innerHTML = '';
         createImages();
         count = img.length;
-    }    
+    }
 });
 
 // Слайдер с отзывами 
@@ -74,17 +75,56 @@ cover.addEventListener('click', event => {
 let mySwiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     loop: true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
     breakpoints: {
-      540: {
-        slidesPerView: 2,      
-      }
+        991: {
+            slidesPerView: 2,
+        }
     }
-  });
+});
+
+// Scroll to top   
+
+let scrolled,
+    timer,
+    btn = document.getElementById('to-top');
+
+function scrollToTop() {
+    if (scrolled > 0) {
+        window.scrollTo(0, scrolled);
+        scrolled = scrolled - 250;
+        timer = setTimeout(scrollToTop, 50);
+    }
+    else {
+        clearTimeout(timer);
+        window.scrollTo(0, 0);
+    }
+}
+
+$(window).on('scroll', function () {
+    scrolled = window.pageYOffset;
+    if (scrolled > 400) {
+        btn.style.display = 'block';
+    } else {
+        btn.style.display = '';
+    }
+});
+
+$(btn).on('click', function () {
+    scrollToTop();
+});
+
+// Add class "active" to menu
+
+// $('.header__menu-link').on('click', function (event) {
+//     event.preventDefault();
+//     $('.header__menu-link').removeClass('active');
+//     $(this).addClass('active');
+// });
