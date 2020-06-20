@@ -123,8 +123,40 @@ $(btn).on('click', function () {
 
 // Add class "active" to menu
 
-// $('.header__menu-link').on('click', function (event) {
-//     event.preventDefault();
-//     $('.header__menu-link').removeClass('active');
-//     $(this).addClass('active');
-// });
+$('.header__menu-link').on('click', function (event) {
+    event.preventDefault();
+    $('.header__menu-link').removeClass('active');
+    $(this).addClass('active');
+});
+
+// Скролл к пункту меню
+
+let offerH = $("#offer").innerHeight(),
+    header = $("#header");
+scrollOffset = $(window).scrollTop();
+
+$("[data-scroll]").on('click', function (event) {
+    event.preventDefault();
+
+    var $this = $(this),
+        blockId = $(this).data('scroll'),
+        blockOfset = $(blockId).offset().top;
+
+    $('.header__menu-link').removeClass('active');
+    $(this).addClass('active');
+
+    $("html, body").animate({
+        scrollTop: blockOfset
+    }, 700);
+
+    if ($(window).width() < 920) {
+        $('.header__menu-list').slideToggle();
+    }
+
+});
+
+// Burger menu nav toogle
+
+$('.nav-toggle').on('click', function () {
+    $('.header__menu-list').slideToggle();
+});
