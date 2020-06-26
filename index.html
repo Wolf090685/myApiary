@@ -132,8 +132,8 @@
                             <li>В США донниковый мед считается одним из лучших и занимает около 70% рынка</li>
                             <li>Обладает успокаивающим, мочегонным, отхаркивающим, антибактериальным,
                                 противовоспалительным, болеутоляющим действиями </li>
-                            <a href="#" class="products-item__back">Назад</a>
                         </ul>
+                        <a href="#" class="products-item__back">Назад</a>
                     </div>
                     <hr>
                     <div class="products-item__price">
@@ -161,8 +161,8 @@
                             <li>Калорийность перги сравнительно невелика - в 100 граммах натурального продукта около 230
                                 ккал (точная цифра зависит от растений-медоносов в составе). Энергетическая ценность на
                                 то же количество - около 970 кДж. Это примерно 12% от нормы для взрослого человека</li>
-                            <a href="#" class="products-item__back">Назад</a>
                         </ul>
+                        <a href="#" class="products-item__back">Назад</a>
                     </div>
                     <hr>
                     <div class="products-item__price">
@@ -191,8 +191,8 @@
                                 стрептококк и дифтерийная палочка. Приостанавливает рост туберкулёза и возбудителя тифа.
                             </li>
                             <li>Не вызывает дисбактериоз, в отличие от антибиотиков обладает меньшей токсичностью</li>
-                            <a href="#" class="products-item__back">Назад</a>
                         </ul>
+                        <a href="#" class="products-item__back">Назад</a>
                     </div>
                     <hr>
                     <div class="products-item__price">
@@ -499,10 +499,34 @@
         </div>
         <!-- /.footer__copyright -->
 
-        <button class="footer__to-top" id="to-top"><img src="images/bee_icons/bee1.svg" alt="Скролл наверх"></button> <!-- /to-top -->
+        <button class="footer__to-top" id="to-top"><img src="images/bee_icons/bee1.svg" alt="Скролл наверх"></button>
+        <!-- /to-top -->
 
     </footer>
     <!-- /.footer -->
+
+    <!-- Modal -->
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Заполните форму заявки</div>
+            <div class="modal__descr">мы перезвоним Вам в течении 10 минут</div>
+            <form class="modal-form" action="#">
+                <input name="name" placeholder="Ваше имя" type="text" required>
+                <input name="phone" placeholder="Ваш телефон" type="tel" required> 
+                <input name="email" placeholder="Ваш E-mail"       type="email" required> 
+                <button class="modal-form__button">Заказать консультацию</button>
+            </form>
+        </div>
+        <!-- /.modal -->
+
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Спасибо за Вашу заявку!</div>
+            <div class="modal__descr">Мы свяжется с Вами в ближайшее время!</div>
+        </div>
+    </div>    
+    <!-- /.overlay -->
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/swiper.min.js"></script>

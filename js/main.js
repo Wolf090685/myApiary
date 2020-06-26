@@ -144,19 +144,29 @@ $("[data-scroll]").on('click', function (event) {
 
     $('.header__menu-link').removeClass('active');
     $(this).addClass('active');
+    $('.header__menu-list').removeClass('show');
 
     $("html, body").animate({
         scrollTop: blockOfset
     }, 700);
-
-    if ($(window).width() < 920) {
-        $('.header__menu-list').slideToggle();
-    }
-
 });
 
-// Burger menu nav toogle
+// Burger menu toogle
 
-$('.nav-toggle').on('click', function () {
-    $('.header__menu-list').slideToggle();
+$('#nav-toggle').on('click', function (event) {
+    event.preventDefault();
+    $('.header__menu-list').toggleClass('show');
 });
+
+// Modal
+
+$('.offer__btn').on('click', function () {
+    $('.overlay, #consultation').fadeIn('slow');
+    $('body').css('overflow', 'hidden');
+});
+$('.modal__close').on('click', function () {
+    $('.overlay, #consultation, #thanks').fadeOut('slow');
+    $('body').css('overflow', '');
+});
+
+
