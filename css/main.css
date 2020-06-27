@@ -343,12 +343,15 @@ button::-moz-focus-inner {
 	transition: .5s all;
 	padding-left: 19px;
 	margin-bottom: 0;
-	list-style-type: none
 }
 
 .products-item__list_active {
 	transform: translateX(-100%);
-	margin-left: 0
+	margin-left: 0;
+}
+
+.products-item__list ul {
+    list-style-type: none;
 }
 
 .products-item__list li {
@@ -1004,6 +1007,7 @@ button::-moz-focus-inner {
     }
 
     .header__menu-link {
+        display: block;
         padding: 15px 50px;
     }
 
