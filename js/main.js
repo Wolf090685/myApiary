@@ -76,6 +76,7 @@ $(function () {
 
     let mySwiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
+        spaceBetween: 20,
         loop: true,
         autoplay: {
             delay: 2500,
@@ -86,7 +87,7 @@ $(function () {
             clickable: true,
         },
         breakpoints: {
-            991: {
+            767: {
                 slidesPerView: 2,
             }
         }
@@ -210,5 +211,23 @@ $(function () {
     validateForms('#consultation form');
 
     $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    // E-mail
+
+    // $('form').submit(function(e) {
+    //     e.preventDefault();
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "mailer/smart.php",
+    //         data: $(this).serialize()
+    //     }).done(function() {
+    //         $(this).find('input').val('');
+    //         $('#consultation').fadeOut();
+    //         $('.overlay, #thanks').fadeIn('slow');
+
+    //         $('form').trigger('reset');
+    //     });
+    //     return false;
+    // });
 
 });
