@@ -695,6 +695,7 @@ button::-moz-focus-inner {
 
 .swiper-container-horizontal > .swiper-pagination-bullets {
     left: -1%;
+    top: -40px;
 }
 
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
