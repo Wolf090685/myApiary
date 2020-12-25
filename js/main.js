@@ -1,7 +1,6 @@
 $(function () {
 
     // Переворот карточек 
-
     function toggleSlide(item) {
         $(item).each(function (i) {
             $(this).on('click', function (e) {
@@ -16,7 +15,6 @@ $(function () {
     toggleSlide('.products-item__back');
 
     // Слайдер фото с пасеки
-
     const img = [
         '1.jpg',
         '2.jpg',
@@ -73,7 +71,6 @@ $(function () {
     });
 
     // Слайдер с отзывами 
-
     let mySwiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -93,39 +90,24 @@ $(function () {
         }
     });
 
-    // Scroll to top   
-
-    let scrolled,
-        timer,
-        btn = document.getElementById('to-top');
-
-    function scrollToTop() {
-        if (scrolled > 0) {
-            window.scrollTo(0, scrolled);
-            scrolled = scrolled - 250;
-            timer = setTimeout(scrollToTop, 50);
-        }
-        else {
-            clearTimeout(timer);
-            window.scrollTo(0, 0);
-        }
-    }
-
+    // Scroll to top 
     $(window).on('scroll', function () {
-        scrolled = window.pageYOffset;
+        let scrolled = window.pageYOffset;
+        let btn = document.querySelector('#to-top'); 
         if (scrolled > 400) {
-            btn.style.display = 'block';
+            btn.style.opacity = 1;
         } else {
-            btn.style.display = '';
-        }
+            btn.style.opacity = 0;
+        }      
     });
-
-    $(btn).on('click', function () {
-        scrollToTop();
-    });
+    $('#to-top').on('click', function (event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 20
+        }, 600);
+    }); 
 
     // Add class "active" to menu
-
     $('.header__menu-link').on('click', function (event) {
         event.preventDefault();
         $('.header__menu-link').removeClass('active');
@@ -133,7 +115,6 @@ $(function () {
     });
 
     // Скролл к пункту меню
-
     let offerH = $("#offer").innerHeight(),
         header = $("#header");
     scrollOffset = $(window).scrollTop();
@@ -155,14 +136,12 @@ $(function () {
     });
 
     // Burger menu toogle
-
     $('#nav-toggle').on('click', function (event) {
         event.preventDefault();
         $('.header__menu-list').toggleClass('show');
     });
 
     // Modal
-
     $('.offer__btn').on('click', function () {
         $('.overlay, #consultation').fadeIn('slow');
         $('body').css('overflow', 'hidden');
@@ -180,7 +159,6 @@ $(function () {
     });
 
     // Validate modal
-
     function validateForms(form){
         $(form).validate({
             rules: {

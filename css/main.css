@@ -820,17 +820,18 @@ button::-moz-focus-inner {
 /* To top */
 
 .footer__to-top {
-    display: none;
-    border: none;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    cursor: pointer;
+    display: block;
+    opacity: 0;
     position: fixed;
     right: 30px;
-    bottom: 30px;    
+    bottom: 30px;
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;   
     background-color: transparent;
-    transition: background-color 0.3s linear;
+    transition: all .5s linear;
     z-index: 20;
 }
 
