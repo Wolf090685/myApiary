@@ -1021,6 +1021,7 @@ button::-moz-focus-inner {
 
     .header__menu-link {
         display: block;
+        width: 100%;
         padding: 15px 50px;
     }
 

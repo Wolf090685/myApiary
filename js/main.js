@@ -93,19 +93,19 @@ $(function () {
     // Scroll to top 
     $(window).on('scroll', function () {
         let scrolled = window.pageYOffset;
-        let btn = document.querySelector('#to-top'); 
+        let btn = document.querySelector('#to-top');
         if (scrolled > 400) {
             btn.style.opacity = 1;
         } else {
             btn.style.opacity = 0;
-        }      
+        }
     });
     $('#to-top').on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: 20
         }, 600);
-    }); 
+    });
 
     // Add class "active" to menu
     $('.header__menu-link').on('click', function (event) {
@@ -141,6 +141,14 @@ $(function () {
         $('.header__menu-list').toggleClass('show');
     });
 
+    // Close mobile menu after click on body
+    $(document).click(function (e) {
+        if (!$(e.target).is('#nav-toggle') && !$(e.target).is('#nav-toggle img') &&
+            !$(e.target).is('.header__menu-item') && !$(e.target).is('.header__menu-link')) {
+            $('.header__menu-list').removeClass('show');
+        }
+    });
+
     // Modal
     $('.offer__btn').on('click', function () {
         $('.overlay, #consultation').fadeIn('slow');
@@ -159,7 +167,7 @@ $(function () {
     });
 
     // Validate modal
-    function validateForms(form){
+    function validateForms(form) {
         $(form).validate({
             rules: {
                 name: {
@@ -176,11 +184,11 @@ $(function () {
                 name: {
                     required: "Введите свое имя",
                     minlength: jQuery.validator.format("Введите минимум {0} символа!")
-                  },
+                },
                 phone: "Введите номер телефона",
                 email: {
-                  required: "Введите почтый ящик",
-                  email: "Неправильно введен адрес почты"
+                    required: "Введите почтый ящик",
+                    email: "Неправильно введен адрес почты"
                 }
             }
         });
