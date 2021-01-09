@@ -168,10 +168,16 @@ $(function () {
 
     // Validate modal
     function validateForms(form) {
+
+        $.validator.methods.cyrillic = function (value, element) {
+            return this.optional (element) || /^[А-Яа-яЁё]+$/.test(value);
+        }
+
         $(form).validate({
             rules: {
                 name: {
                     required: true,
+                    cyrillic: true,
                     minlength: 2
                 },
                 phone: "required",
@@ -183,7 +189,8 @@ $(function () {
             messages: {
                 name: {
                     required: "Введите свое имя",
-                    minlength: jQuery.validator.format("Введите минимум {0} символа!")
+                    minlength: jQuery.validator.format("Введите минимум {0} символа!"),
+                    cyrillic: "В имени допустима только кириллица, без пробелов и знаков препиния"
                 },
                 phone: "Введите номер телефона",
                 email: {
